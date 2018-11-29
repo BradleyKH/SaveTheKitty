@@ -1,0 +1,261 @@
+/* All screens */
+
+BODY {
+  text-align: center;
+  font-family: arial;
+  background-color: #AAAAAA;
+}
+
+A {
+    text-decoration: none;
+}
+
+A.nav {
+    color: #FFF;
+}
+
+.expanded {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+IMG {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.onload {
+  border: 2px solid black;
+  margin: auto;
+  background-color: white;  
+}
+
+.grid {
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: white;
+}
+
+.grid TD {
+  border: 0px solid black;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.message {
+  display: block;
+  text-align: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+UL {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.mobileMenuButton {
+    font-size: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline;
+    margin: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.scoreformcontainer {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    opacity: .9;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.scoreform {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    transform: translate(0, -75px);
+}
+
+.scoredisplay {
+    border: 0px;
+    width: 20px;
+}
+
+.scores {
+    background-color: white;
+    border-collapse: collapse;
+    margin: 10px;
+    display: inline-block;
+}
+
+.scores TH {
+    background-color: white;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.scores TD {
+    text-align: left;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 100px;
+}
+
+/* Large Screens */
+ 
+@media only screen and (min-width: 651px) {
+  
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+    .sidebar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        background-color: #000;
+        color: white;
+        z-index: 1;
+        padding: 20px 20px 0px 20px;
+        opacity: .9;
+        display: none;
+    }
+
+  .controls {
+    display: none;
+  }
+
+  .stats {
+    display: flex;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid black;
+  }
+
+  .heart {
+    height: 30px;
+    width: 30px;
+  }
+
+  .smallonly {
+    display: none;
+  }
+}
+
+/* Small Screens */
+
+@media only screen and (max-width: 650px) {
+
+    BODY {
+        margin: 0px;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        background-color: #000;
+        color: white;
+        z-index: 1;
+        padding: 5px 5px 0px 5px;
+        opacity: .9;
+        display: none;
+    }
+
+    .control-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        margin: auto;
+        display: none;
+        width: 100%;
+    }
+
+    .controls {
+        display: inline;
+        text-align: center;
+        z-index: 1;
+        opacity: .2;
+        visibility: hidden
+    }
+
+        .controls TD {
+            height: 20vw;
+            width: 20vw;
+            min-height: 20vw;
+            min-width: 20vw;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+    .stats {
+        display: flex;
+        background-color: #FFFFFF;
+        margin: auto;
+        margin-top: 10px;
+        padding: 5px;
+        border: 2px solid black;
+        font-size: 10px;
+        visibility: hidden;
+    }
+
+    .heart {
+        height: 15px;
+        width: 15px;
+    }
+
+    .smallonly {
+        display: block;
+    }
+}
