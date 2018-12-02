@@ -260,18 +260,22 @@ function keyCheck(e) {
   evt = e.keyCode || e.charCode;
 
   switch (evt) {
+    case 65: // A
     case 37: // Left Arrow
       event.preventDefault();
       moveUser('left');
       break;
+    case 87: // W
     case 38: // Up Arrow
       event.preventDefault();
       moveUser('up');
       break;
+    case 68: // D
     case 39: // Right Arrow
       event.preventDefault();
       moveUser('right');
       break;
+    case 83: // S
     case 40: // Down Arrow
       event.preventDefault();
       moveUser('down');

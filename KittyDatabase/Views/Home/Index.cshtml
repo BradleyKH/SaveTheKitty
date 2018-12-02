@@ -21,7 +21,7 @@
     <img src="~/images/monster.png" style="width: 50px; height: 50px;">
     <p>Slay the monsters before they get to the kitten!</p>
     <img src="~/images/new/kitty2.jpg" style="width: auto; height: 50px;">
-    <p>Use the arrow keys to move, and watch out for holes!</p>
+    <p>Use the arrows or WASD to move, and watch out for holes!</p>
     <img src="~/images/hole.png" style="width: 50px; height: 50px;">
     <p>Press Spacebar or <a href="#" onclick="onSpaceBar();">touch here</a> to begin.</p>
 </div>
@@ -38,13 +38,13 @@
         </tr>
         <tr>
             <td><img src="~/images/left.png" ontouchstart="event.preventDefault(); moveUser('left');"></td>
-            <td ontouchstart="event.preventDefault();"></td>
+            <td><img src="~/images/circle.png" ontouchstart="onSpaceBar();"></td>
             <td><img src="~/images/right.png" ontouchstart="event.preventDefault(); moveUser('right');"></td>
         </tr>
         <tr>
             <td ontouchstart="event.preventDefault();"></td>
             <td><img src="~/images/down.png" ontouchstart="event.preventDefault(); moveUser('down');"></td>
-            <td><img src="~/images/circle.png" ontouchstart="onSpaceBar();"></td></td>
+            <td ontouchstart="event.preventDefault();"></td>
         </tr>
     </table>
 </div>
