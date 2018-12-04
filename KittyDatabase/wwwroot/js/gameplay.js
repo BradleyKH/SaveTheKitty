@@ -259,30 +259,35 @@ function keyCheck(e) {
 
   evt = e.keyCode || e.charCode;
 
-  switch (evt) {
-    case 65: // A
-    case 37: // Left Arrow
-      event.preventDefault();
-      moveUser('left');
-      break;
-    case 87: // W
-    case 38: // Up Arrow
-      event.preventDefault();
-      moveUser('up');
-      break;
-    case 68: // D
-    case 39: // Right Arrow
-      event.preventDefault();
-      moveUser('right');
-      break;
-    case 83: // S
-    case 40: // Down Arrow
-      event.preventDefault();
-      moveUser('down');
-      break;
-    case 32: // Spacebar
-      onSpaceBar();
-      break;
+    if (evt == 32 && document.getElementById('scoreformcontainer').style.display != 'inline') {
+        onSpaceBar();
+        return;
+    }
+
+    if (!gameActive)
+        return;
+
+    switch (evt) {
+        case 65: // A
+        case 37: // Left Arrow
+            event.preventDefault();
+            moveUser('left');
+            break;
+        case 87: // W
+        case 38: // Up Arrow
+            event.preventDefault();
+            moveUser('up');
+            break;
+        case 68: // D
+        case 39: // Right Arrow
+            event.preventDefault();
+            moveUser('right');
+            break;
+        case 83: // S
+        case 40: // Down Arrow
+            event.preventDefault();
+            moveUser('down');
+            break;
   }
   
   document.getElementById('controls').style.display = 'none';
