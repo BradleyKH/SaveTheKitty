@@ -52,7 +52,6 @@ namespace KittyDatabase
                 var today = DateTime.Today;
                 var todayStr = today.Year + "-" + today.Month + "-" + today.Day;
 
-
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = "INSERT INTO high_scores (player, score, date) " +
                     "VALUES (@player, @score, @date);";
