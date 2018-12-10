@@ -44,12 +44,14 @@ function hideScoreForm() {
     document.getElementById('scoreformcontainer').style.display = 'none';
 }
 
-function showScoreMsg() {
-    document.getElementById('scoreFormContent').style.display = 'none';
-    document.getElementById('scoreMsg').style.display = 'block';
-
+function onSubmit() {
+    if (document.getElementById('scoreInput').value.trim() != '') {
+        document.getElementById('scoreFormContent').style.display = 'none';
+        document.getElementById('scoreMsg').style.display = 'block';
+    }
+    else
+        event.preventDefault();
 }
-
 
 function newGame() {
   addLife();
