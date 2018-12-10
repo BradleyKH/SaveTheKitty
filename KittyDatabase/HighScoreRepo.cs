@@ -21,7 +21,7 @@ namespace KittyDatabase
                 conn.Open();
 
                 var cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT id, player, score, date FROM high_scores ORDER BY score DESC LIMIT 10;";
+                cmd.CommandText = "SELECT id, player, score, date FROM high_scores ORDER BY score DESC LIMIT 20;";
 
                 var reader = cmd.ExecuteReader();
 
