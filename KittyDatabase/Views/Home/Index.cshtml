@@ -67,21 +67,25 @@
 @using (Html.BeginForm("Add", "Home", "POST"))
 {
     <div class="scoreformcontainer" id="scoreformcontainer">
-        <div class="scoreform">
-            <p>
-                Your score is:
-                <label asp-for="Score">
-                    <input id="score" name="Score" value="0" readonly class="scoredisplay" />
-                </label>
-            </p>
-            <p>
-                <label asp-for="Player">
-                    <input type="text" name="Player" value="" required placeholder="Enter your name"/>
-                </label>
-            </p>
+        <div class="scoreform" id="scoreForm">
+            <div id="scoreFormContent">
+                <p>
+                    Your score is:
+                    <label asp-for="Score">
+                        <input id="score" name="Score" value="0" readonly class="scoredisplay" />
+                    </label>
+                </p>
+                <p>
+                    <label asp-for="Player">
+                        <input id="scoreInput" type="text" name="Player" value="" required placeholder="Enter your name"/>
+                    </label>
+                </p>
 
-            <input type="submit" value="Save Score" />
-            <input type="button" value="Cancel" onclick="hideScoreForm()" />
+                <input type="submit" value="Save Score" onclick="showScoreMsg()"/>
+                <input type="button" value="Cancel" onclick="hideScoreForm()" />
+            </div>
+            <div id="scoreMsg"><p>Score submitted! Loading high scores...</p></div>
+                 
         </div>
     </div>
 }

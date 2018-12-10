@@ -36,11 +36,18 @@ var gameActive = false;
 
 function showScoreForm() {
     document.getElementById('scoreformcontainer').style.display = 'inline';
+    document.getElementById('scoreInput').focus();
 }
 
 
 function hideScoreForm() {
     document.getElementById('scoreformcontainer').style.display = 'none';
+}
+
+function showScoreMsg() {
+    document.getElementById('scoreFormContent').style.display = 'none';
+    document.getElementById('scoreMsg').style.display = 'block';
+
 }
 
 
